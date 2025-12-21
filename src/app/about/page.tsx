@@ -2,12 +2,10 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ThreeBackground from "@/components/ThreeBackground";
 
 export default function About() {
   return (
     <div className="page-wrapper">
-      <ThreeBackground />
       <Header />
 
       <main>

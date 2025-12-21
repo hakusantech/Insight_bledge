@@ -6,16 +6,17 @@ export default function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <h3>InsightBridge</h3>
-            <p style={{ opacity: 0.6, maxWidth: '300px', fontSize: '0.9rem', lineHeight: '1.8' }}>
-              私たちは、深い洞察と確かなアプローチで、次世代のリーダーたちの成長を支援するプロフェッショナル集団です。
+            <h3 style={{ color: '#fff', fontSize: '1.5rem', marginBottom: '1rem', letterSpacing: '0.1em', fontFamily: 'var(--font-noto-serif-jp)' }}>InsightBridge</h3>
+            <p style={{ color: '#fff', opacity: 0.7, fontSize: '0.85rem', letterSpacing: '0.05em' }}>
+              深い洞察や気づきを、成長に繋げる橋渡しをする
             </p>
           </div>
           <div className="footer-col">
             <h4>Company</h4>
             <ul>
               <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/#about">Our Mission</Link></li>
+              <li><Link href="/#mission">Our Mission</Link></li>
+              <li><Link href="/privacy">Privacy Policy</Link></li>
             </ul>
           </div>
           <div className="footer-col">
@@ -23,13 +24,6 @@ export default function Footer() {
             <ul>
               <li><Link href="/#services">Executive Assessment</Link></li>
               <li><Link href="/#services">Executive Coaching</Link></li>
-            </ul>
-          </div>
-          <div className="footer-col" id="contact">
-            <h4>Contact</h4>
-            <ul style={{ opacity: 0.6, fontSize: '0.85rem' }}>
-              <li style={{ marginBottom: '0.5rem' }}>contact@insightbridge.com</li>
-              <li>東京都千代田区（詳細はお問い合わせください）</li>
             </ul>
           </div>
         </div>

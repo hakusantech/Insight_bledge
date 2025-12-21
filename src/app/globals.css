@@ -152,17 +152,36 @@ p {
 }
 
 .nav-item {
+  position: relative; /* Base for pseudo-element */
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-primary);
   opacity: 0.7;
+  padding: 4px 0;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .nav-item:hover {
   opacity: 1;
-  color: var(--color-secondary);
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 /* Hero Section Redesign */
@@ -172,7 +191,7 @@ p {
   min-height: 700px;
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end; /* Align to bottom */
   overflow: hidden;
   background-image: url("/hero-visual.png");
   background-size: cover;
@@ -181,27 +200,33 @@ p {
   animation: hero-zoom 20s infinite alternate ease-in-out;
 }
 
+/* 文字を読みやすくするための、下からの自然な暗めグラデーション */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 15, 35, 0.8) 0%,
+    rgba(0, 15, 35, 0.4) 30%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
 @keyframes hero-zoom {
   from { transform: scale(1); }
   to { transform: scale(1.05); }
 }
 
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 100%);
-  backdrop-filter: blur(2px);
-  z-index: 0;
-}
-
 .hero-typewriter {
   position: relative;
   z-index: 2;
-  align-self: flex-start;
+  align-self: flex-end; /* Align to bottom */
   margin: 0;
-  padding: 140px 0 0 100px;
+  padding: 0 0 80px 60px; /* Further down and left */
 }
 
 .hero-typewriter-text {
@@ -210,9 +235,10 @@ p {
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: #000000;
+  color: #ffffff;
   text-transform: uppercase;
   display: inline-block;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* アンダーライン（あんだし）のエフェクト */
@@ -223,10 +249,26 @@ p {
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #002b5b 0%, transparent 100%);
+  background: linear-gradient(90deg, #ffffff 0%, transparent 100%);
   transform: scaleX(0);
   transform-origin: left;
   animation: underline-grow 1.5s ease forwards 0.5s;
+}
+
+.hero-tagline {
+  display: block;
+  font-family: var(--font-noto-serif-jp); /* 明朝体に変更して高級感を出す */
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem); /* サイズを少し抑えて上品に */
+  font-weight: 500;
+  letter-spacing: 0.3em; /* 文字間隔を広げてエレガントに */
+  color: rgba(255, 255, 255, 0.95);
+  margin-top: 50px;
+  opacity: 0;
+  animation: fadeInUp 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) 2s forwards;
+  max-width: 1000px;
+  line-height: 2;
+  font-style: italic; /* わずかに斜体にして洗練された印象に（フォントが対応していれば） */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes underline-grow {
@@ -239,7 +281,7 @@ p {
   display: inline-block;
   margin-left: 0.2rem;
   animation: blink 1s steps(2, start) infinite;
-  color: #000000;
+  color: #ffffff;
 }
 
 @keyframes blink {
@@ -282,37 +324,102 @@ p {
   100% { transform: translateY(100%); }
 }
 
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.section-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-md);
+}
+
+.section-title {
+  font-family: var(--font-noto-serif-jp);
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0;
+}
+
+.section-title::after {
+  display: none; /* Removed the old underline */
+}
+
+/* Mission Section */
+.mission-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-statement {
+  font-family: var(--font-noto-serif-jp);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  line-height: 1.8;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xl);
+  font-weight: 700;
+}
+
+.mission-description {
+  font-size: 1.1rem;
+  line-height: 2;
+  color: var(--color-text-light);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.mission-cta {
+  margin-top: var(--spacing-xl);
+}
+
 /* Service Card Refinement */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+}
+
 .service-card {
   padding: var(--spacing-xl);
   background: var(--color-white);
-  border: 1px solid rgba(0,0,0,0.03);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  text-align: left;
+  border: 1px solid rgba(0, 43, 91, 0.05);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 30px 60px rgba(0, 43, 91, 0.08);
   border-color: var(--color-secondary);
 }
 
-.feature-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-xl);
-  align-items: center;
+.service-name {
+  font-family: var(--font-noto-serif-jp);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
 }
 
-@media (max-width: 768px) {
-  .feature-row {
-    grid-template-columns: 1fr;
-  }
-  
-  .hero-title {
-    font-size: 2.5rem;
-  }
+.service-jp-name {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  font-weight: 500;
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: 0.1em;
+}
+
+.service-description {
+  font-size: 0.95rem;
+  line-height: 2;
+  color: var(--color-text-light);
 }
 
 /* Footer Section Redesign */
@@ -324,7 +431,7 @@ p {
 
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: var(--spacing-xl);
   margin-bottom: var(--spacing-xxl);
 }
