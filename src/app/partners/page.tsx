@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default function Partners() {
   return (
@@ -20,8 +21,13 @@ export default function Partners() {
           <div className="container" style={{ maxWidth: '900px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>
               <div className="partner-image">
-                <div style={{ width: '100%', position: 'relative', aspectRatio: '3/4', backgroundColor: '#fff', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', opacity: 0.5, boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-                  <span style={{ fontSize: '0.8rem' }}>PHOTO</span>
+                <div style={{ width: '100%', position: 'relative', aspectRatio: '3/4', backgroundColor: '#fff', borderRadius: '4px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+                  <Image
+                    src="/okumura.jpg"
+                    alt="提携パートナー 奥村 幸治"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
                 </div>
               </div>
               
