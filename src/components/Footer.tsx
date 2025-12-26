@@ -17,7 +17,6 @@ export default function Footer() {
               <li><Link href="/about">会社概要</Link></li>
               <li><Link href="/representative">代表挨拶・プロフィール</Link></li>
               <li><Link href="/partners">提携パートナー</Link></li>
-              <li><Link href="/privacy">プライバシーポリシー</Link></li>
             </ul>
           </div>
           <div className="footer-col">
@@ -29,7 +28,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="copyright">
-          &copy; {new Date().getFullYear()} InsightBridge. All rights reserved.
+          <div className="copyright-inner">
+            <span>&copy; {new Date().getFullYear()} InsightBridge. All rights reserved.</span>
+            <Link href="/privacy" className="footer-privacy-link">プライバシーポリシー</Link>
+          </div>
         </div>
       </div>
     </footer>
