@@ -16,6 +16,7 @@ export default function Footer() {
             <ul>
               <li><Link href="/about">会社概要</Link></li>
               <li><Link href="/representative">代表挨拶・プロフィール</Link></li>
+              <li><Link href="/partners">提携パートナー</Link></li>
               <li><Link href="/privacy">プライバシーポリシー</Link></li>
             </ul>
           </div>

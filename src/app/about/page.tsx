@@ -17,6 +17,7 @@ export default function About() {
             
             <nav style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
               <a href="/representative" className="nav-item" style={{ fontSize: '0.9rem', fontWeight: 600 }}>代表挨拶・プロフィール</a>
+              <a href="/partners" className="nav-item" style={{ fontSize: '0.9rem', fontWeight: 600 }}>提携パートナー</a>
             </nav>
           </div>
         </section>

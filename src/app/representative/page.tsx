@@ -17,7 +17,7 @@ export default function Representative() {
         </section>
 
         {/* Message Section */}
-        <section className="section">
+        <section id="message" className="section">
           <div className="container" style={{ maxWidth: '800px' }}>
             <h2 style={{ fontSize: '1.8rem', fontFamily: 'var(--font-noto-serif-jp)', marginBottom: '3rem', textAlign: 'center', color: 'var(--color-primary)' }}>代表挨拶</h2>
             <div className="message-content" style={{ color: 'var(--color-text-main)', lineHeight: '2.2' }}>
@@ -46,7 +46,7 @@ export default function Representative() {
         </section>
 
         {/* Profile Section */}
-        <section className="section bg-light">
+        <section id="profile" className="section bg-light">
           <div className="container" style={{ maxWidth: '900px' }}>
             <h2 style={{ fontSize: '1.8rem', fontFamily: 'var(--font-noto-serif-jp)', marginBottom: '4rem', textAlign: 'center', color: 'var(--color-primary)' }}>代表プロフィール</h2>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>
