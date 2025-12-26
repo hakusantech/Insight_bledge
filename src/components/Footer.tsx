@@ -14,9 +14,10 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Company</h4>
             <ul>
-              <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/#mission">Our Mission</Link></li>
-              <li><Link href="/privacy">Privacy Policy</Link></li>
+              <li><Link href="/about">会社概要</Link></li>
+              <li><Link href="/message">代表挨拶</Link></li>
+              <li><Link href="/profile">代表プロフィール</Link></li>
+              <li><Link href="/privacy">プライバシーポリシー</Link></li>
             </ul>
           </div>
           <div className="footer-col">
