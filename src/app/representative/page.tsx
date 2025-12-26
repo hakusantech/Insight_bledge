@@ -50,16 +50,16 @@ export default function Representative() {
           <div className="container" style={{ maxWidth: '900px' }}>
             <h2 style={{ fontSize: '1.8rem', fontFamily: 'var(--font-noto-serif-jp)', marginBottom: '4rem', textAlign: 'center', color: 'var(--color-primary)' }}>代表プロフィール</h2>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>
-              <div className="profile-image">
-                <div style={{ width: '100%', position: 'relative', aspectRatio: '3/4', backgroundColor: '#fff', borderRadius: '4px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-                  <Image
-                    src="/CEO_photo-scaled.jpg"
-                    alt="代表取締役 岩本 秀和"
-                    fill
-                    style={{ objectFit: 'cover' }}
-                  />
-                </div>
-              </div>
+                    <div className="profile-image">
+                      <div style={{ width: '100%', position: 'relative', aspectRatio: '3/4', backgroundColor: '#fff', borderRadius: '4px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+                        <Image
+                          src="/CEO_photo-scaled.webp"
+                          alt="代表取締役 岩本 秀和"
+                          fill
+                          style={{ objectFit: 'cover' }}
+                        />
+                      </div>
+                    </div>
               
               <div className="profile-details">
                 <h3 style={{ fontSize: '1.8rem', fontFamily: 'var(--font-noto-serif-jp)', marginBottom: '0.5rem' }}>岩本 秀和</h3>

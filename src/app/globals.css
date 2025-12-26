@@ -237,10 +237,12 @@ p {
   display: flex;
   align-items: flex-end; /* Align to bottom */
   overflow: hidden;
-  background-image: url("/hero-visual.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+
+.hero-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   animation: hero-zoom 20s infinite alternate ease-in-out;
 }
 

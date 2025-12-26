@@ -8,7 +8,7 @@ export default function Header() {
         <div className="logo">
           <Link href="/">
             <Image
-              src="/logo (1).png"
+              src="/logo.webp"
               alt="InsightBridge Logo"
               width={160}
               height={45}

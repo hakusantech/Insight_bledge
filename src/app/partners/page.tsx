@@ -23,7 +23,7 @@ export default function Partners() {
               <div className="partner-image">
                 <div style={{ width: '100%', position: 'relative', aspectRatio: '3/4', backgroundColor: '#fff', borderRadius: '4px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
                   <Image
-                    src="/okumura.jpg"
+                    src="/okumura.webp"
                     alt="提携パートナー 奥村 幸治"
                     fill
                     style={{ objectFit: 'cover' }}
