@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default function Representative() {
   return (
@@ -50,8 +51,13 @@ export default function Representative() {
             <h2 style={{ fontSize: '1.8rem', fontFamily: 'var(--font-noto-serif-jp)', marginBottom: '4rem', textAlign: 'center', color: 'var(--color-primary)' }}>代表プロフィール</h2>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>
               <div className="profile-image">
-                <div style={{ width: '100%', aspectRatio: '3/4', backgroundColor: '#fff', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', opacity: 0.5, boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-                  <span style={{ fontSize: '0.8rem' }}>PHOTO</span>
+                <div style={{ width: '100%', position: 'relative', aspectRatio: '3/4', backgroundColor: '#fff', borderRadius: '4px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+                  <Image
+                    src="/CEO_photo-scaled.jpg"
+                    alt="代表取締役 岩本 秀和"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
                 </div>
               </div>
               
@@ -63,21 +69,24 @@ export default function Representative() {
                   <h4 style={{ fontSize: '1.1rem', color: 'var(--color-primary)', borderBottom: '1px solid #ddd', paddingBottom: '0.5rem', marginBottom: '1.5rem' }}>経歴</h4>
                   <div style={{ lineHeight: '2', fontSize: '0.95rem' }}>
                     <p style={{ marginBottom: '1rem' }}>
-                      2006年よりリーダーシップ・コンサルティング業界に従事。大手外資系組織人事コンサルティングファーム等を経て、エグゼクティブ・アセスメントおよびエグゼクティブ・コーチングの専門家として活動。
+                      2022年に経営人材の成長支援を行うインサイトブリッジ株式会社を創業。
+                    </p>
+                    <p style={{ marginBottom: '1rem' }}>
+                      2006年から16年間にわたり、外資系大手リーダーシップ・コンサルティング・ファームであるエゴンゼンダー及びラッセル・レイノルズ・アソシエイツに勤務。ラッセル・レイノルズ・アソシエイツでは日本代表として、エグゼクティブ・アセスメント、エグゼクティブ・コーチング、エグゼクティブサーチ等のサービスを提供。日系大企業の社長後継プロジェクトや執行役員登用へ向けた経営幹部人材のアセスメント、次世代経営層育成プロジェクト等を数多く手掛ける。
                     </p>
                     <p>
-                      これまで日系・外資系企業の経営層（CEO、取締役、事業部長クラス）約一千名に対し、選抜・育成・登用のためのアセスメントおよび成長支援のためのコーチングを提供してきた実績を持つ。
+                      リーダーシップ・コンサルティング業界に入る以前は、キャリアのスタートであるソニーを経て、A.T. カーニーでコンサルタントをつとめたのち、GEヘルスケアにて、マーケティング部長としてモニターとカーディオロジーの二つのグループを統括。
                     </p>
                   </div>
                 </div>
 
                 <div>
-                  <h4 style={{ fontSize: '1.1rem', color: 'var(--color-primary)', borderBottom: '1px solid #ddd', paddingBottom: '0.5rem', marginBottom: '1.5rem' }}>専門領域</h4>
+                  <h4 style={{ fontSize: '1.1rem', color: 'var(--color-primary)', borderBottom: '1px solid #ddd', paddingBottom: '0.5rem', marginBottom: '1.5rem' }}>学歴・資格</h4>
                   <ul style={{ listStyle: 'none', padding: 0, lineHeight: '2', fontSize: '0.95rem' }}>
-                    <li>・エグゼクティブ・アセスメント</li>
-                    <li>・エグゼクティブ・コーチング</li>
-                    <li>・次世代リーダー育成体系の構築支援</li>
-                    <li>・経営チームのチームビルディング</li>
+                    <li>・慶應義塾大学文学部史学科卒業</li>
+                    <li>・米国ペンシルバニア大学ウォートン・ビジネススクール経営学修士（MBA）取得</li>
+                    <li>・国際コーチング連盟（ICF）認定コーチ</li>
+                    <li>・Hogan Assessments認定コーチ</li>
                   </ul>
                 </div>
               </div>
