@@ -16,8 +16,7 @@ export default function About() {
             <p style={{ fontSize: '1.2rem', color: '#666', fontFamily: 'var(--font-noto-serif-jp)', marginBottom: '3rem' }}>私たちについて</p>
             
             <nav style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
-              <a href="/message" className="nav-item" style={{ fontSize: '0.9rem', fontWeight: 600 }}>代表挨拶</a>
-              <a href="/profile" className="nav-item" style={{ fontSize: '0.9rem', fontWeight: 600 }}>代表プロフィール</a>
+              <a href="/representative" className="nav-item" style={{ fontSize: '0.9rem', fontWeight: 600 }}>代表挨拶・プロフィール</a>
             </nav>
           </div>
         </section>
