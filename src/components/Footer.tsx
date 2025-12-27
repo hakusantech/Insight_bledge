@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="footer-brand">
             <h3 style={{ color: '#fff', fontSize: '1.5rem', marginBottom: '1rem', letterSpacing: '0.1em', fontFamily: 'var(--font-noto-serif-jp)' }}>InsightBridge</h3>
             <p style={{ color: '#fff', opacity: 0.7, fontSize: '0.85rem', letterSpacing: '0.05em' }}>
-              深い洞察や気づきを、成長に繋げる橋渡しをする
+              深い洞察と気づきを、リーダーの成長への架け橋に。
             </p>
           </div>
           <div className="footer-col">

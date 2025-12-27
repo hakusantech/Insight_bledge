@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="hero-typewriter">
         <HeroTypewriter />
         <p className="hero-tagline">
-          深い洞察や気づきを、成長に繋げる橋渡しをする
+          深い洞察と気づきを、リーダーの成長への架け橋に。
         </p>
       </div>
     </section>

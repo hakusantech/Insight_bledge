@@ -45,17 +45,17 @@ export default function About() {
           </div>
         </section>
 
-        {/* Origin */}
-        <section className="section">
-          <div className="container" style={{ maxWidth: '800px' }}>
-            <h2 style={{ textAlign: 'center' }}>社名の由来</h2>
-            <div style={{ padding: '3rem', backgroundColor: '#fff', boxShadow: '0 10px 40px rgba(0,0,0,0.05)', borderRadius: '8px' }}>
-              <p style={{ fontSize: '1.1rem', lineHeight: '2', marginBottom: '0', textAlign: 'justify' }}>
-                リーダーが持つ強みや課題に対し、アセスメントやコーチングを通じて深い洞察や気づき（<span style={{color: 'var(--color-primary)', fontWeight: 'bold'}}>Insight</span>）を提供することにより、リーダーの更なる成長へと繋げる橋渡し（<span style={{color: 'var(--color-secondary)', fontWeight: 'bold'}}>Bridge</span>）になりたいとの思いから、社名を「<span style={{fontWeight: 'bold'}}>インサイトブリッジ</span>」にしました。
-              </p>
-            </div>
-          </div>
-        </section>
+                {/* Origin */}
+                <section className="section">
+                  <div className="container" style={{ maxWidth: '800px' }}>
+                    <h2 style={{ textAlign: 'center' }}>社名の由来</h2>
+                    <div style={{ padding: '3rem', backgroundColor: '#fff', boxShadow: '0 10px 40px rgba(0,0,0,0.05)', borderRadius: '8px' }}>
+                      <p style={{ fontSize: '1.1rem', lineHeight: '2', marginBottom: '0', textAlign: 'justify' }}>
+                        リーダーが持つ強みや課題に対して、アセスメントやコーチングを通じて深い洞察や気づき（<span style={{color: 'var(--color-primary)', fontWeight: 'bold'}}>Insight</span>）を提供し、その先のさらなる成長へとつなぐ橋渡し（<span style={{color: 'var(--color-secondary)', fontWeight: 'bold'}}>Bridge</span>）でありたい──。<br />そのような思いを込めて、「インサイトブリッジ」という社名を掲げました。
+                      </p>
+                    </div>
+                  </div>
+                </section>
 
         {/* Company Overview */}
         <section className="section bg-light">
