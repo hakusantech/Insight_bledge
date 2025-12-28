@@ -1,19 +1,18 @@
 import HeroTypewriter from "./HeroTypewriter";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="hero" aria-label="InsightBridge Hero Section">
       <div className="hero-bg-wrapper">
-        <img
+        <Image
           src="/hero-visual-v5.webp"
           alt="InsightBridge - Leadership and Growth"
-          style={{ 
-            width: '100%', 
-            height: '100%', 
-            objectFit: 'cover',
-            position: 'absolute',
-            inset: 0
-          }}
+          fill
+          priority
+          quality={85}
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
         />
       </div>
       <div className="hero-typewriter">
@@ -28,4 +27,3 @@ export default function Hero() {
     </section>
   );
 }
-

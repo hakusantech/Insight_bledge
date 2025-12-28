@@ -382,6 +382,37 @@ p {
   100% { transform: translateY(100%); }
 }
 
+/* Reduced Motion Support - Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .hero-bg-wrapper {
+    animation: none !important;
+  }
+  
+  .hero-typewriter-cursor {
+    animation: none !important;
+    opacity: 1;
+  }
+  
+  .hero-typewriter-text::after {
+    animation: none !important;
+    transform: scaleX(1);
+  }
+  
+  .hero-tagline,
+  .hero-origin {
+    animation: none !important;
+    opacity: 1;
+  }
+}
+
 /* Section Header */
 .section-header {
   text-align: center;
