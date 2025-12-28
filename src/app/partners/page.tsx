@@ -71,7 +71,7 @@ export default function Partners() {
                       <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.85rem', lineHeight: '1.8' }}>
                         <li>・リクルート・ワークス研究所</li>
                         <li>・立教大学ビジネスクリーター創出センター</li>
-                        <li>・DBMライフキャチア研究所</li>
+                        <li>・DBMライフキャリア研究所</li>
                       </ul>
                     </div>
                   </div>
