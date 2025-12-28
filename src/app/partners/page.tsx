@@ -19,7 +19,7 @@ export default function Partners() {
         {/* Content Section */}
         <section className="section">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>
+            <div className="profile-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>
               <div className="partner-image">
                 <div style={{ width: '100%', position: 'relative', aspectRatio: '3/4', backgroundColor: '#fff', borderRadius: '4px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
                   <Image
