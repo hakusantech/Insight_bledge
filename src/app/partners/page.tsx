@@ -9,7 +9,7 @@ export default function Partners() {
       
       <main>
         {/* Page Hero */}
-        <section className="section" style={{ paddingTop: '160px', paddingBottom: '80px', backgroundColor: 'var(--color-bg-light)' }}>
+        <section className="section page-hero" style={{ backgroundColor: 'var(--color-bg-light)' }}>
           <div className="container">
             <span style={{ display: 'block', color: 'var(--color-secondary)', fontWeight: 700, letterSpacing: '0.3em', fontSize: '0.85rem', textTransform: 'uppercase', marginBottom: '1rem', textAlign: 'center' }}>Partners</span>
             <h1 style={{ fontSize: '2.5rem', textAlign: 'center', color: 'var(--color-primary)', fontFamily: 'var(--font-noto-serif-jp)' }}>提携パートナー</h1>
@@ -21,14 +21,20 @@ export default function Partners() {
           <div className="container" style={{ maxWidth: '900px' }}>
             <div className="profile-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>
               <div className="partner-image">
-                <div style={{ width: '100%', position: 'relative', aspectRatio: '3/4', backgroundColor: '#fff', borderRadius: '4px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-                  <Image
-                    src="/okumura.webp"
-                    alt="提携パートナー 奥村 幸治"
-                    fill
-                    style={{ objectFit: 'cover' }}
-                  />
-                </div>
+                <Image
+                  src="/okumura.webp"
+                  alt="提携パートナー 奥村 幸治"
+                  width={400}
+                  height={533}
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    display: 'block',
+                    borderRadius: '4px',
+                    boxShadow: '0 4px 20px rgba(0,0,0,0.05)'
+                  }}
+                  sizes="(max-width: 768px) 90vw, 400px"
+                />
               </div>
               
               <div className="partner-details">
@@ -57,7 +63,7 @@ export default function Partners() {
 
                 <div style={{ marginBottom: '2.5rem' }}>
                   <h3 style={{ fontSize: '1.1rem', color: 'var(--color-primary)', borderBottom: '1px solid #ddd', paddingBottom: '0.5rem', marginBottom: '1.2rem' }}>教育・リサーチ</h3>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                  <div className="two-col-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                     <div>
                       <p style={{ fontWeight: 600, marginBottom: '0.5rem', fontSize: '0.9rem' }}>教育</p>
                       <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.85rem', lineHeight: '1.8' }}>

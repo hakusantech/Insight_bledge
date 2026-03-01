@@ -575,6 +575,12 @@ p {
   opacity: 1;
 }
 
+/* Page Hero Section */
+.page-hero {
+  padding-top: 160px;
+  padding-bottom: 80px;
+}
+
 /* Mobile Menu Toggle Button */
 .mobile-menu-toggle {
   display: none;
@@ -726,15 +732,27 @@ p {
     padding: var(--spacing-lg);
   }
   
+  /* Page Hero Mobile */
+  .page-hero {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
   /* Profile Grid Mobile (Representative & Partners) */
   .profile-grid {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
-  
-  .profile-image {
+
+  .profile-image,
+  .partner-image {
     max-width: 300px;
     margin: 0 auto;
+  }
+
+  /* Two column grid collapse */
+  .two-col-grid {
+    grid-template-columns: 1fr !important;
   }
   
   /* Section Spacing */
