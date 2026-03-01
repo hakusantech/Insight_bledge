@@ -21,6 +21,11 @@ const notoSerifJP = Noto_Serif_JP({
 export const metadata: Metadata = {
   title: "InsightBridge | インサイトブリッジ",
   description: "日本のリーダーの成長支援を通じて、日本社会の発展に貢献する。",
+  icons: {
+    icon: '/logo.webp',
+    shortcut: '/logo.webp',
+    apple: '/logo.webp',
+  },
 };
 
 export default function RootLayout({

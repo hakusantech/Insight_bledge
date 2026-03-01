@@ -51,12 +51,14 @@ export default function Representative() {
             <h2 style={{ fontSize: '1.8rem', fontFamily: 'var(--font-noto-serif-jp)', marginBottom: '4rem', textAlign: 'center', color: 'var(--color-primary)' }}>代表プロフィール</h2>
             <div className="profile-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '4rem', alignItems: 'start' }}>
                     <div className="profile-image">
-                      <div style={{ width: '100%', position: 'relative', aspectRatio: '3/4', backgroundColor: '#fff', borderRadius: '4px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+                      <div style={{ backgroundColor: '#fff', borderRadius: '4px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
                         <Image
                           src="/CEO_photo-scaled.webp"
                           alt="代表取締役 岩本 秀和"
-                          fill
-                          style={{ objectFit: 'cover' }}
+                          width={400}
+                          height={533}
+                          style={{ width: '100%', height: 'auto', display: 'block' }}
+                          sizes="(max-width: 768px) 300px, 300px"
                         />
                       </div>
                     </div>
